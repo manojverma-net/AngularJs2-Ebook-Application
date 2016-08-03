@@ -1,0 +1,45 @@
+
+ 
+<div class="container" *ngIf="book">
+   
+    <div class="row">
+        <div class="col-md-4 margin-top-10">
+            <img src = '{{book.volumeInfo.imageLinks.small}}' alt="book"/> 
+        </div>
+        <div class="col-md-8">
+            <div class="row">
+               <div class="col-md-12"> 
+                   <h2>{{book.volumeInfo.title}}</h2>
+               </div>
+            </div>
+            <div class="row"> 
+               <div class="col-md-4">Author(s):</div>
+               <div class="col-md-8">
+                   <span *ngFor="let author of book.volumeInfo.authors">{{author}}</span> 
+               </div>
+            </div>
+            <div class="row"> 
+               <div class="col-md-4">Publisher:</div>
+               <div class="col-md-8">{{book.volumeInfo.publisher}}</div>
+            </div>
+             <div class="row"> 
+               <div class="col-md-4">Published Date:</div>
+               <div class="col-md-8">{{book.volumeInfo.publishedDate}}</div>
+            </div>
+             <div class="row"> 
+               <div class="col-md-4">Pages:</div>
+               <div class="col-md-8">{{book.volumeInfo.pageCount}}</div>
+            </div>
+            <div class="row margin-top-10"> 
+                    <div class="col-md-12" [innerHTML] = 'book.volumeInfo.description'> </div> 
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-md-6"></div>
+        <div class="col-md-6 pull-right">
+            <a href="{{book.Download}}">Download</a>
+        </div>
+    </div>
+    
+</div> 

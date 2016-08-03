@@ -1,0 +1,7 @@
+
+<nav>
+    <ul class="pager">
+        <li class="previous" [class.disabled]="disablePrevButton" ><a (click)="previousPage()"><span aria-hidden="true">&larr;</span> Older</a></li>
+        <li class="next" [class.disabled]="disableNextButton"><a (click)="nextPage()">Newer <span aria-hidden="true">&rarr;</span></a></li>
+    </ul>
+</nav>
